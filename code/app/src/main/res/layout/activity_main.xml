@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,13 +11,19 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:elevation="4dp">
+        android:background="#8E1717"
+        android:elevation="4dp"
+        app:subtitleTextColor="@color/black"
+        app:titleTextColor="@color/design_default_color_error">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#8E1717"
+            android:backgroundTint="#8E1717"
+            android:fontFamily="@font/aclonica"
             android:text="Cities"
-            android:textAppearance="?attr/textAppearanceHeadline6" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     </com.google.android.material.appbar.MaterialToolbar>
 
@@ -27,5 +34,13 @@
         android:layout_weight="1"
         android:clipToPadding="false"
         android:padding="8dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_add_city"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:backgroundTint="#A81919"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
 </LinearLayout>
